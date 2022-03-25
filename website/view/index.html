@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>HOME | Just5MoreMinutes</title>
+        <meta charset="UTF-16">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../style/index.css">
+
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/main.js"></script>
+    </head>
+
+    <body onload="write_and_fade()">
+        <style>
+            @keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+        </style>
+        <div class="head">
+            <a href="../view/index.html"><p style="text-align:center"><img class="pfp" src="../images/pfp.PNG" alt="pfp" width="200px" height="200px" /></p></a>
+            <hr class="hr-mini">
+            <p id="my-name"><i>Just5MoreMinutes</i></p>
+            <ul class="nav">
+                <li><a href="../view/index.html"><span class="hidden">~ </span>home</a></li>
+                <li><a href="../view/about.html"><span class="hidden">~ </span>about</a></li>
+                <li><a href="../view/projects.html"><span class="hidden">~ </span>projects</a></li>
+                <li><a href="../view/contact.html"><span class="hidden">~ </span>contact</a></li>
+                <li><a href="../view/socials.html"><span class="hidden">~ </span>social</a></li>
+            </ul>
+        </div>
+        <h1 class="home-header" id="header"></h1>
+        <div class="main-content" id="0">
+            <hr class="hr-medium" style="color: #2f3258;">
+            <p class="info0" id="wait-for-load">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Felis eget velit aliquet sagittis id.<br>Pellentesque pulvinar pellentesque habitant morbi. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim.<br>Lacinia at quis risus sed vulputate odio ut enim.</p>
+            <hr class="hr-medium" style="color: #2f3258;"><br><br>
+            <h2 class="latest-header" id="output" style="text-align: center;"><span class="hidden" style="color:#2f3258">>&nbsp;</span></h2>
+            <p>Here you can find all the important news!</p>
+        </div>
+        <footer><span id="copy">&copy; Just5MoreMinutes 2022</span></footer>
+    </body>
+
+</html>
