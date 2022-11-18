@@ -1,0 +1,125 @@
+/*
+ 
+*/
+:root { 
+    --new_color: beige; 
+    --new_radius: 40px;
+    --new_scale: 1;
+}
+::selection { background-color: rgb(179, 175, 171); }
+/* ------------------ */
+/* GENERAL            */
+/* ------------------ */
+html, body {
+    /* margin: 0; */
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif; /* temporary */
+    background-color: rgb(17, 17, 17);
+    font-size: 16px;
+}
+
+h1 { font-size: 2.5em; font-weight: 300; }
+h2 { font-size: 2.0em; font-weight: 300; }
+h3 { font-size: 1.5em; font-weight: 300; }
+h4 { font-size: 1.2em; font-weight: 300; }
+h5 { font-size: 1.0em; font-weight: 300; }
+h6 { font-size: 0.5em; font-weight: 300; }
+
+p { word-break: break-all; color: aliceblue; }
+h1,h2,h3,h4,h5,h6 { color: beige; }
+
+a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
+
+/* ------------------ */
+/* CLASSES            */
+/* ------------------ */
+
+/* navigation */
+.nav-head {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+
+    width: 80%;
+
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 10px;
+
+    background-color: #333;
+    border-radius: 100px;
+    border: 0px solid transparent;
+}
+
+    .nav-bar {
+        list-style: none;
+        padding: 10px;
+        margin: auto;
+        width: auto;
+    }
+
+        .nav-element {
+            display: inline-flex;
+            list-style: none;
+            text-decoration: none;
+
+            padding-left: 5.625rem;
+            padding-right: 5.625rem;
+        }
+
+            .nav-element a {
+                display: block;
+                text-decoration: none;
+                color: antiquewhite;
+                font-weight: bolder;
+                font-family: navfont;
+                text-shadow: 0px 2px 20px rgb(77, 73, 73);
+                transition: .3s;
+            }
+
+            .nav-element a:hover {
+                transform: scale(1.5);
+                color: rgb(210, 200, 185) !important;
+                text-shadow: 0px 0px 30px rgb(176, 167, 167, 0.5) !important;
+            }
+
+/* ------------------------- */
+/* ----- main content ----- */
+.main { height: 100%; }
+    .name { 
+        color: var(--new_color) !important;
+        text-shadow: 0px 0px var(--new_radius) var(--new_color);
+        scale: var(--new_scale);
+        font-size: 10rem;
+        font-family: txt;
+        letter-spacing: 5px;
+
+        width: fit-content;
+
+        margin-right: auto; margin-left: auto;
+        transition: 2s;
+
+        top: 25%;
+        position: relative;
+    }
+
+
+
+/* ------------------ */
+/* UTILITY            */
+/* ------------------ */
+.txt-c { text-align: center !important; }
+.txt-l { text-align: left !important; }
+.txt-r { text-align: right !important; }
+
+
+@font-face {
+    font-family: navfont;
+    src: url("../fonts/JosefinSans-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: txt;
+    src: url("../fonts/Outfit-VariableFont_wght.ttf");
+}
