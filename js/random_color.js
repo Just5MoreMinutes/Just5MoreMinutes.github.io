@@ -6,12 +6,18 @@ function getColor() {
     }
     return color;
 }
+
+function wait(element, variable, value, original_value, timeout) {
+  document.getElementById(element).style.setProperty(variable, value);
+  setTimeout(function() { document.getElementById(element).style.setProperty(variable, original_value); }, timeout);
+}
+
   
 function setColor() {
-    document.getElementById('random_col').style.setProperty('--new_color', getColor());
-    document.getElementById('random_col').style.setProperty('--new_radius', '60px')
-    document.getElementById('random_col').style.setProperty('--new_scale', '1.2')
-    setTimeout(function() { document.getElementById('random_col').style.setProperty('--new_color', 'beige'); }, 2000)
-    setTimeout(function() { document.getElementById('random_col').style.setProperty('--new_radius', '40px'); }, 2000)
-    setTimeout(function() { document.getElementById('random_col').style.setProperty('--new_scale', '1'); }, 2000)
+    wait('random_col','--new_color', getColor(), 'beige', 2000);
+    wait('random_col','--new_radius', '60px', '40px', 2000);
+    wait('random_col','--new_scale', '1.2', '1', 2000);
+    wait('random_col','--new_letter_space', '10px', '5px', 2000);
+    wait('random_col','--opacity', 0.3, 1, 2000)
+    wait('show_on_hover','--display', 'opacity-change', 0, 2000)
 }

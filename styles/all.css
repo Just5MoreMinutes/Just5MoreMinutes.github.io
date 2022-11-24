@@ -5,6 +5,9 @@
     --new_color: beige; 
     --new_radius: 40px;
     --new_scale: 1;
+    --new_letter_space: 5px;
+    --opacity: 1;
+    --display: 0;
 }
 ::selection { background-color: rgb(179, 175, 171); }
 /* ------------------ */
@@ -39,10 +42,11 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
     display: flex;
     justify-content: center;
     position: sticky;
+    top: 15px;
 
     width: 80%;
 
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: auto;
     margin-left: auto;
 
@@ -87,24 +91,55 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
 
 /* ------------------------- */
 /* ----- main content ----- */
-.main { height: 100%; }
+.main { 
+    height: 100%; 
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
     .name { 
         color: var(--new_color) !important;
-        text-shadow: 0px 0px var(--new_radius) var(--new_color);
-        scale: var(--new_scale);
+        text-shadow: 0px 0px var(--new_radius) var(--new_color) !important;
+        transform: scale(var(--new_scale));
         font-size: 10rem;
         font-family: txt;
-        letter-spacing: 5px;
+        letter-spacing: var(--new_letter_space);
+        opacity: var(--opacity);
 
         width: fit-content;
+        height: fit-content;
 
         margin-right: auto; margin-left: auto;
         transition: 2s;
 
         top: 25%;
-        position: relative;
+        position: fixed;
     }
 
+    .info-line {
+        font-size: 30px;
+        font-family: txt;
+
+        position: fixed;
+        top: 42%;
+
+        opacity: var(--display);
+
+        transition: 2s ease;
+    }
+
+    .down-arrow {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+
+        position: relative;
+        top: 0.45rem;
+
+        animation: arrow_bounce 2s infinite;
+        animation-timing-function: linear;
+    }
 
 
 /* ------------------ */
@@ -114,6 +149,45 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
 .txt-l { text-align: left !important; }
 .txt-r { text-align: right !important; }
 
+
+
+
+
+@keyframes arrow_bounce {
+    0% {
+        margin-top: 0px;
+        transition: all;
+    }
+    20% {
+        margin-top: -5px;
+        transition: all;
+    }
+    40% {
+        margin-top: -15px;
+        transition: all;
+    }
+    60% {
+        margin-top: -20px;
+        transition: all;
+    }
+    80% {
+        margin-top: -25px;
+        transition: all;
+    }
+    100% {
+        margin-top: 3px;
+        transition: all;
+    }
+}
+
+@keyframes opacity-change {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 @font-face {
     font-family: navfont;
