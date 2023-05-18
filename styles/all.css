@@ -98,36 +98,34 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
     justify-content: center;
     align-items: center;
 }
-    .name { 
-        color: var(--new_color) !important;
-        text-shadow: 0px 0px var(--new_radius) var(--new_color) !important;
-        transform: scale(var(--new_scale));
-        font-size: 10rem;
-        font-family: txt;
-        letter-spacing: var(--new_letter_space);
-        opacity: var(--opacity);
-
-        width: fit-content;
-        height: fit-content;
-
-        margin-right: auto; margin-left: auto;
-        transition: 2s;
-
-        top: 25%;
-        position: fixed;
+    .header-wrapper {
+        margin-top: -9.375rem;
     }
+        .name { 
+            color: var(--new_color) !important;
+            text-shadow: 0px 0px var(--new_radius) var(--new_color) !important;
+            transform: scale(var(--new_scale));
+            font-size: 10rem;
+            font-family: txt;
+            letter-spacing: var(--new_letter_space);
+            opacity: var(--opacity);
 
-    .info-line {
-        font-size: 40px;
-        font-family: txt;
+            width: fit-content;
+            height: fit-content;
 
-        position: fixed;
-        top: 40%;
+            margin-right: auto; margin-left: auto;
+            transition: 2s;
+        }
 
-        opacity: var(--display);
+        .info-line {
+            font-size: 40px;
+            font-family: txt;
 
-        transition: 2s ease;
-    }
+            opacity: var(--display);
+
+            transition: 2s ease;
+            margin-top: -12.813rem;
+        }
 
     .down-arrow {
         display: flex;
@@ -141,6 +139,23 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
         animation-timing-function: linear;
     }
 
+/* ---------------------- */
+/* ----- about page ----- */
+.about-header {
+    width: 100%;
+    height: auto;
+}
+    .about {
+        font-size: 8.5rem;
+    }
+
+    .about-hr {
+        display: block;
+    }
+
+.about-main {
+    width: 100%;
+}
 
 /* ------------------ */
 /* UTILITY            */
@@ -149,6 +164,15 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
 .txt-l { text-align: left !important; }
 .txt-r { text-align: right !important; }
 
+.heading { font-family: txt; }
+
+.hr-s { max-width: 15%; }
+.hr-m { max-width: 30%; }
+.hr-l { max-width: 55%; }
+.hr-e { max-width: 75%; }
+.hr-f { max-width: 95%; }
+
+.hidden { display: none; }
 
 
 
@@ -186,6 +210,24 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes scale_about {
+    from {
+        font-size: 6.5rem;
+    }
+    to {
+        font-size: 8.5rem;
+    }
+}
+
+@keyframes about_hr {
+    from {
+        display: hidden !important;
+    }
+    to {
+        display: block;
     }
 }
 

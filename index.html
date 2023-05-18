@@ -7,7 +7,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <link rel="stylesheet" type="text/css" href="/styles/all.css">
+            <link rel="stylesheet" type="text/css" href="styles/all.css">
 
             <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 
@@ -18,23 +18,27 @@
             
             <div class="nav-head">
                 <ul class="nav-bar">
-                    <li class="nav-element"><a href="#" title="HOME">HOME</a></li>
-                    <li class="nav-element"><a href="#" title="ABOUT">ABOUT</a></li>
-                    <li class="nav-element"><a href="#" title="PROJECTS">PROJECTS</a></li>
-                    <li class="nav-element"><a href="#" title="GALLERY">ARTICLES</a></li>
+                    <li class="nav-element"><a href="index.html" title="HOME">HOME</a></li>
+                    <li class="nav-element"><a href="./views/about.html" title="ABOUT">ABOUT</a></li>
+                    <li class="nav-element"><a href="#" title="PROJECTS" onclick="load_page('about')">PROJECTS</a></li>
+                    <li class="nav-element"><a href="#" title="GALLERY">BLOG</a></li>
                     <li class="nav-element"><a href="#" title="CONTACT">CONTACT</a></li>
                 </ul>
             </div>
 
             <div class="main">
-                <h1 class="name txt-c" id="random_col" onmouseover="setColor()">Just5MoreMinutes</h1>
-                <p class="info-line txt-c" id="show_on_hover">developer & writer</p>
-                <script type="text/javascript" src="js/random_color.js"></script>
+                <div class="header-wrapper">
+                    <h1 class="name txt-c" id="random_col" onmouseover="setColor()">Just5MoreMinutes</h1>
+                    <p class="info-line txt-c" id="show_on_hover">developer & writer</p>
+                    <script type="text/javascript" src="js/random_color.js"></script>
+                </div>
             </div>
 
             <footer>
                 <span class="txt-c">&copy; Just5MoreMinutes, 2022</span>
             </footer>
+
+            <script type="text/javascript" src="js/controller.js"></script>
 
         </body>
 
