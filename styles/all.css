@@ -188,7 +188,7 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
             }
         .about-me-text {
             margin-left: 4.375rem;
-            margin-top: -11.875rem;
+            margin-top: -12.9rem;
             line-break: strict;
         }
 
@@ -252,6 +252,7 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
         margin-top: -11.875rem;
         line-break: strict;
     }
+
 /* ---- HOBBIES ---- */
     .hobbys-container {
         width: 50em;
@@ -281,6 +282,61 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
             margin-top: -10rem;
         }
 
+/* ---- PROJECTS ---- */
+    .other-projects-container {
+        width: 50em;
+        height: fit-content;
+        padding: 20px;
+        margin-top: 59rem;
+        text-align: left;
+
+        position: absolute;
+
+        word-wrap: normal;
+
+        transition: .5s;
+
+        rotate: -4deg;
+        opacity: 1;
+    }
+            .other-projects-header {
+                transition: .5s;
+            }   
+        .other-projects-text {
+            margin-left: 4.375rem;
+            margin-top: -8.9rem;
+            line-break: strict;
+        }
+
+/* ---- SOCIALS ---- */
+#socials-stuff-that-also-is-on-the-contact-page {
+    margin-top: 77rem;
+    rotate: 7deg;
+}
+    .unnecessary-socials-container {
+        width: 50em;
+        height: fit-content;
+        padding: 10px;
+        padding-left: 2rem;
+        margin-top: 79rem;
+        text-align: right;
+
+        position: absolute;
+
+        word-wrap: normal;
+
+        transition: .5s;
+
+        rotate: 3deg;
+        opacity: 1;
+    }
+        .unnecessary-socials-header-container {
+            padding-left: 50rem;
+        }
+        .unnecessary-socials-text {
+            margin-top: -9rem;
+        }
+
 /* ---- ANIMATIONS ---- */
 .about-me-container:hover { transform: scale(1.2); rotate: 0deg; }
 .about-me-container:hover .about-me-header-text { transform: scale(2); }
@@ -294,6 +350,12 @@ a { color: rgb(197, 178, 153); text-decoration: none; cursor: pointer; }
 
 .hobbys-container:hover { transform: scale(1.2); rotate: 0deg; }
 .hobbys-container:hover .hobbys-header { transform: scale(2); }
+
+.other-projects-container:hover { transform: scale(1.2); rotate: 0deg; }
+.other-projects-container:hover .other-projects-header { transform: scale(2); }
+
+.unnecessary-socials-container:hover { transform: scale(1.2); rotate: 0deg; }
+.unnecessary-socials-container:hover .unnecessary-socials-header { transform: scale(2); }
 
 /* ------------------ */
 /* UTILITY            */
